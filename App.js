@@ -113,19 +113,19 @@ export default class App extends React.Component {
         >
         <ScrollView contentContainerStyle={styles.timerList}>
           <ToggleableTimerForm onFormSubmit={this.handleCreateFormSubmit} />
-            {timers.map(({ title, project, id, elapsed, isRunning }) => (
-              <EditableTimer
-                key={id}
-                id={id}
-                title={title}
-                project={project}
-                elapsed={elapsed}
-                isRunning={isRunning}
-                onFormSubmit={this.handleFormSubmit}
-                onRemovePress={this.handleRemovePress}
-                onStartPress={this.toggleTimer}
-                onStopPress={this.toggleTimer}
-              />
+          {timers.map(({ title, project, id, elapsed, isRunning }) => (
+            <EditableTimer
+              key={id}
+              id={id}
+              title={title}
+              project={project}
+              elapsed={elapsed}
+              isRunning={isRunning}
+              onFormSubmit={this.handleFormSubmit}
+              onRemovePress={this.handleRemovePress}
+              onStartPress={this.toggleTimer}
+              onStopPress={this.toggleTimer}
+            />
             ))}
           </ScrollView>
         </KeyboardAvoidingView>
